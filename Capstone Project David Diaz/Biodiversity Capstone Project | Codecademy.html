@@ -1,0 +1,254 @@
+  * Codecademy logo <https://www.codecademy.com/>
+
+/
+
+/Biodiversity Capstone Project
+<https://www.codecademy.com/learn/biodiveristy-capstone>
+
+  *
+    Connected to Codecademy
+  *
+    Bell Icon
+
+  *
+
+Drag the edges to resize the window.
+
+In Projects, you can keep track of your progress as you go throught the
+tasks. Check each item as you complete it!
+
+/
+
+/
+/
+
+/script.py
+/
+
+/
+23
+ 
+1
+
+import codecademylib
+
+2
+
+import pandas as pd
+
+3
+
+from matplotlib import pyplot as plt
+
+4
+
+​
+
+5
+
+# Loading the Data
+
+6
+
+species = pd.read_csv('species_info.csv')
+
+7
+
+​
+
+8
+
+# print species.head()
+
+9
+
+print species.head()
+
+10
+
+# Inspecting the DataFrame
+
+11
+
+species_count = species.scientific_name.nunique()
+
+12
+
+​
+
+13
+
+species_type = species.category.unique()
+
+14
+
+​
+
+15
+
+conservation_statuses = species.conservation_status.unique()
+
+16
+
+​
+
+17
+
+conservation_counts = species.groupby('conservation_status').scientific_name.nunique().reset_index()
+
+18
+
+​
+
+19
+
+print conservation_counts
+
+20
+
+#part 4
+
+21
+
+species.fillna('No Intervention', inplace = True)
+
+22
+
+conservation_counts_fixed = species.groupby('conservation_status').scientific_name.nunique().reset_index()
+
+23
+
+print conservation_counts_fixed
+
+Run
+
+Reset Exercise
+/
+
+/
+Share Code
+/
+
+/
+/
+
+/
+/
+
+/
+/
+
+/
+/
+
+/Learn
+Biodiveristy Capstone Project - Investigating Protected Species
+
+
+  Biodiversity Project
+
+Welcome to the Introduction to Data Analysis Biodiversity Capstone project!
+
+You are a biodiversity analyst working for the National Parks Service.
+You have been given a CSV file species_info.csv with data about
+different species in our National Parks, including:
+
+  * The scientific name of each species
+  * The common names of each species
+  * The species conservation status
+
+    /(CSV data based on data from the National Parks Service.)/
+
+The National Parks Service would like you to perform some data analysis
+on the conservation statuses of these species and to investigate if
+there are any patterns or themes to the types of species that become
+endangered. During this project, you will analyze, clean up, and plot
+data, pose questions and seek to answer them in a meaning way.
+
+Let's get started!
+
+/
+
+/Instructions
+*1.
+
+*
+
+You'll need |pandas| and |matplotlib| for this project. Import both modules.
+
+/
+
+/
+Stuck? Get a hint
+
+The standard is to import pandas as |pd| and import pyplot from
+matplotlibs as |plt|.
+
+*2.
+
+*
+
+Load species_info.csv into a DataFrame called |species|.
+
+/
+
+/
+Stuck? Get a hint
+
+The command to load a CSV is |pd.read_csv()|.
+
+*3.
+
+*
+
+Print and inspect the DataFrame by using |.head()|.
+
+What kind of information is contained in this DataFrame?
+
+/
+
+/
+/
+
+/Community Forums
+Get help and ask questions in the Codecademy Forums
+<https://discuss.codecademy.com/>
+/
+
+/Report a Bug
+If you see a bug or any other issue with this page, please report it
+here <#>.
+/
+
+/Learn
+/
+
+/Instructions
+/
+
+/Community Forums
+/
+
+/Report a Bug
+/
+
+/Learn
+/
+
+/Instructions
+/
+
+/Community Forums
+/
+
+/Report a Bug
+
+1. Biodiversity Project
+
+Back
+
+1/15
+Next
+
+Get Help
+
